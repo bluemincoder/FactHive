@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #202020;
+  color: #ffffff;
+  font-family: "Sono", sans-serif;
+  padding: 48px 64px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* MAIN LAYOUT */
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ELEMENTS */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo img {
+  width: 68px;
+  height: 68px;
+}
+
+h1 {
+  font-size: 50px;
+  /* text-transform: uppercase; */
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 1000;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.category {
+  margin-bottom: 5px;
+}
+
+.fact {
+  font-size: 20px;
+  line-height: 1.4;
+  background-color: #2c2c2c;
+  box-shadow: none;
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  /* letter-spacing: -1px; */
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 1200px) {
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: bold;
+  text-align: center;
+  /* padding-top: 3px; */
+  letter-spacing: 1px;
+  color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 100px;
+}
+
+.vote-buttons {
+  margin-left: auto;
+  flex-shrink: 0;
+
+  display: flex;
+  gap: 8px;
+}
+
+.vote-buttons button {
+  border: none;
+  background-color: #5b5b5b;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vote-buttons button:hover {
+  background-color: #828282;
+}
+
+.vote-buttons button:active {
+  background-color: #828282;
+  transform: translateY(5px);
+  transition: 100ms;
+}
+
+ul {
+  list-style: none;
+}
+
+.source:link,
+.source:visited {
+  color: #002fff;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: 0.3s;
+}
+
+.source:hover,
+.source:active {
+  color: #00b7ff;
+}
+
+.btn {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 30px 0px;
+}
+
+.btn:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 100ms;
+}
+
+.btn-all-categories {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.btn-category {
+  height: 50px;
+  margin: 5px;
+  width: 120px;
+  background: #333;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Consolas, Courier New, monospace;
+  border: none;
+  font-size: 18px;
+  color: rgb(161, 161, 161);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 10px;
+  /* background: linear-gradient(145deg, #2e2d2d, #212121);
+  -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+  box-shadow: -1px -5px 0px #41465b, 5px 5px 0px #41465b,
+    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121; */
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-category:hover {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.btn-category:active {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 20px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 20px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
+.btn-all {
+  height: 50px;
+  margin: 5px;
+  background: #f5f5f5;
+  border: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Consolas, Courier New, monospace;
+  /* border: solid #404c5d 1px; */
+  font-size: 18px;
+  color: rgb(36, 36, 36);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 10px;
+  /* -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b;
+  box-shadow: -1px -5px 0px #41465b, 5px 5px 0px #41465b; */
+  /* box-shadow: 0px 0px 20px #ffffff; */
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-all:hover {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  /* color: #d6d6d6; */
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.btn-all:active {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 20px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 20px #545b78;
+  /* color: #d6d6d6; */
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
+/* FORM */
+.fact-form {
+  background-color: #2c2c2c;
+  box-shadow: none;
+  margin-bottom: 40px;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+}
+
+.fact-form input,
+.fact-form select {
+  width: 220px;
+  background-color: #5b5b5b;
+  border: none;
+  border-radius: 100px;
+  padding: 16px;
+  font-size: 15px;
+  color: inherit;
+  font-family: inherit;
+}
+
+.fact-form input::placeholder {
+  color: #c8c8c8c7;
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.fact-form span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 18px;
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding: 32px 48px;
+  }
+
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
+}
